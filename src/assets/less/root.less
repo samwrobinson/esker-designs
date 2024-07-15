@@ -123,6 +123,166 @@ body {
 }
 
 /*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #stats-543 {
+        padding: var(--sectionPadding);
+    }
+    #stats-543 .cs-container {
+        width: 100%;
+        /* changes to 1440px at desktop */
+        max-width: 43.75rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #stats-543 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #stats-543 .cs-circles {
+        width: 100%;
+        padding: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    #stats-543 .cs-item {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #stats-543 .cs-ring-wrapper {
+        /* changes to 100% at tablet */
+        width: 70%;
+        max-width: 20.25rem;
+        /* 28px - 48px */
+        margin-bottom: clamp(1.75rem, 4vw, 3rem);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+        aspect-ratio: 1;
+    }
+    #stats-543 .cs-number {
+        /* 49px - 61px */
+        font-size: clamp(3.0625rem, 5vw, 3.8125rem);
+        font-weight: 900;
+        margin: 0;
+        /* prevents mouse from interacting with it */
+        pointer-events: none;
+        line-height: 1.2em;
+        color: var(--headerColor);
+        display: flex;
+        align-items: flex-start;
+    }
+    #stats-543 .cs-percentage {
+        /* 25px - 31px */
+        font-size: clamp(1.5625rem, 5vw, 1.9375rem);
+        color: var(--primaryLight);
+        margin-left: 0.75rem;
+        transform: translateY(-0.75rem);
+    }
+    #stats-543 .cs-h3 {
+        /* 24px - 36px */
+        font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 0.75rem 0;
+    }
+    #stats-543 .cs-desc {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.4vw, 1rem);
+        line-height: 1.5em;
+        text-align: center;
+        /* prevents mouse from interacting with it */
+        pointer-events: none;
+        width: 100%;
+        color: var(--bodyTextColor);
+    }
+    #stats-543 .cs-ring {
+        --ring-width: 12px;
+        position: absolute;
+        width: calc(100% - var(--ring-width));
+        aspect-ratio: 1;
+        overflow: visible;
+        pointer-events: none;
+        rotate: -90deg;
+        scale: 1 -1;
+    }
+    #stats-543 .cs-ring circle {
+        fill: none;
+        /* ring grey background */
+        stroke: #fafbfc;
+        stroke-width: var(--ring-width);
+    }
+    #stats-543 .cs-ring circle:last-of-type {
+        /* ring color */
+        stroke: var(--primaryLight);
+        stroke-dasharray: calc(var(--ratio) * 314%) 314%;
+        transition: stroke-dasharray 1s;
+    }
+    #stats-543 .cs-ring-wrapper:hover .cs-ring {
+        --ratio: 0 !important;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #stats-543 .cs-circles {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #stats-543 .cs-item {
+        /* changes to 100% at desktop */
+        width: 27.5vw;
+    }
+    #stats-543 .cs-ring-wrapper {
+        width: 100%;
+    }
+    #stats-543 .cs-desc {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+}
+/* Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+    #stats-543 .cs-container {
+        max-width: 90rem;
+    }
+    #stats-543 .cs-circles {
+        flex-wrap: nowrap;
+    }
+    #stats-543 .cs-item {
+        width: 100%;
+    }
+}
+
+                                
+
+/*-- -------------------------- -->
 <---         Why Choose         -->
 <--- -------------------------- -*/
 

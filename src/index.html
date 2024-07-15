@@ -1,7 +1,7 @@
 ---
 title: 'Esker Web Design - Web Design Made Simple - Warren, VT'
 description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
+preloadImg: '/assets/images/logo.png'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -199,68 +199,72 @@ eleventyNavigation:
                                 
 
 <!-- ============================================ -->
-<!--                 Side By Side                 -->
+<!--                   Stats                      -->
 <!-- ============================================ -->
 
-<section id="sbs-1372">
+<section id="stats-543">
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Our Performance</span>
             <h2 class="cs-title">Web Design Company You Can Trust</h2>
             <p class="cs-text">
-                Our web design company specializes in the professional creation of unique sites. Our team constantly monitors the emergence of new technologies that we are not afraid to implement in web projects, making them modern and high-tech.
+                Our web design company specializes in the professional creation of clean, fast, and personalized websites. 
             </p>
-            <div class="cs-content-flair">
-                <div class="cs-bar">
-                    <h3 class="cs-h3">
-                        Savings Strategies
-                        <span class="cs-percentage">83%</span>
-                    </h3>
-                    <!--change the --progress number to match the percentage in cs-number-->
-                    <div class="cs-progress" aria-hidden="true">
-                        <span class="cs-progress-bar"  style="--progress: 83%"></span>
-                    </div>
-                </div>
-                <div class="cs-bar">
-                    <h3 class="cs-h3">
-                        Tax Planning
-                        <span class="cs-percentage">72%</span>
-                    </h3>
-                    <!--change the --progress number to match the percentage in cs-number-->
-                    <div class="cs-progress" aria-hidden="true">
-                        <span class="cs-progress-bar"  style="--progress: 72%"></span>
-                    </div>
-                </div>
-                <div class="cs-bar">
-                    <h3 class="cs-h3">
-                        Trusted Company
-                        <span class="cs-percentage">96%</span>
-                    </h3>
-                    <!--change the --progress number to match the percentage in cs-number-->
-                    <div class="cs-progress" aria-hidden="true">
-                        <span class="cs-progress-bar"  style="--progress: 96%"></span>
-                    </div>
-                </div>
-            </div>
-            <a href="" class="cs-button-solid">Contact Now</a>
         </div>
-        <div class="cs-flex">
-            <picture class="cs-picture">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="assets/images/Lantern.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="assets/images/Lantern.jpg">
-                <img loading="lazy" decoding="async" src="assets/images/Lantern.jpg" alt="person in cafe" width="414" height="627">
-            </picture>
-            <div class="cs-review">
-                <img class="cs-icon" loading="lazy" decoding="async" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/oeange-quotes.svg" alt="appliance" width="120" height="99">
-                <p class="cs-review-text">
-                    Small businesses are the heartbeat of communities, embodying the spirit of entrepreneurship, determination, and local support.
-                </p>
-            </div>
-        </div>
+        <!--SVG Circles-->
+        <ul class="cs-circles">
+            <li class="cs-item">
+                <div class="cs-ring-wrapper">
+                    <span class="cs-number">50<span class="cs-percentage">%</span></span>
+                    <!--Change the --ratio to the decimal percentage of this circle-->
+                    <svg class="cs-ring" style="--ratio: 0.50">
+                        <circle cx="50%" cy="50%" r="50%"/>
+                        <circle cx="50%" cy="50%" r="50%"/>
+                    </svg>
+                </div>
+                <h3 class="cs-h3">Page Speed</h3>
+                <span class="cs-desc">Hand-coded websites are typically 30-50% faster than those built with page builders due to cleaner, leaner code.</span>
+            </li>
+            <li class="cs-item">
+                <div class="cs-ring-wrapper">
+                    <span class="cs-number">64<span class="cs-percentage">%</span></span>
+                    <!--Change the --ratio to the decimal percentage of this circle-->
+                    <svg class="cs-ring" style="--ratio: 0.64">
+                        <circle cx="50%" cy="50%" r="50%"/>
+                        <circle cx="50%" cy="50%" r="50%"/>
+                    </svg>
+                </div>
+                <h3 class="cs-h3">Cost Savings</h3>
+                <span class="cs-desc">64% of companies say that improving website performance significantly lowers their operational costs.</span>
+            </li>
+            <li class="cs-item">
+                <div class="cs-ring-wrapper">
+                    <span class="cs-number">60<span class="cs-percentage">%</span></span>
+                    <!--Change the --ratio to the decimal percentage of this circle-->
+                    <svg class="cs-ring" style="--ratio: 0.60">
+                        <circle cx="50%" cy="50%" r="50%"/>
+                        <circle cx="50%" cy="50%" r="50%"/>
+                    </svg>
+                </div>
+                <h3 class="cs-h3">Mobile-First</h3>
+                <span class="cs-desc">60% of all internet traffic is on mobile devices. We make sure to account for this in our code, every time.</span>
+            </li>
+            <li class="cs-item">
+                <div class="cs-ring-wrapper">
+                    <span class="cs-number">10<span class="cs-percentage">%</span></span>
+                    <!--Change the --ratio to the decimal percentage of this circle-->
+                    <svg class="cs-ring" style="--ratio: 0.10">
+                        <circle cx="50%" cy="50%" r="50%"/>
+                        <circle cx="50%" cy="50%" r="50%"/>
+                    </svg>
+                </div>
+                <h3 class="cs-h3">SEO</h3>
+                <span class="cs-desc">Hand-coded websites have cleaner HTML and CSS. Websites with clean, semantic HTML see up to a 10% increase in search engine visibility.</span>
+            </li>
+        </ul>
     </div>
 </section>
+                                
                                 
 
     {% include 'components/cta.html' %}
