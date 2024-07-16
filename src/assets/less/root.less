@@ -127,6 +127,272 @@ html {
 }
 
 /*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #meet-team-1348 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-topper {
+            color: var(--secondary);
+        }
+
+        .cs-card-group {
+            width: 100%;
+            /* max-width is removed on tablet */
+            max-width: (700/16rem);
+            margin: 0;
+            padding: 0;
+            display: grid;
+            align-items: stretch;
+            grid-template-columns: repeat(13, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 2vw, 1.25rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            grid-column: 3 / 12;
+
+            &:hover {
+                .cs-link {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .cs-picture-wrapper {
+            /* 12px - 20px */
+            margin-bottom: clamp(0.75rem, 4vw, 1.25rem);
+            position: relative;
+        }
+
+        .cs-picture {
+            margin: 0 auto;
+            border-radius: 50%;
+            display: block;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-info {
+            text-align: center;
+            /* 16px - 24px */
+            padding: clamp(1rem, 1.7vw, 1.5rem);
+            background-color: #f7f7f7;
+            border-radius: (24/16rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* makes the info boxes grow when the items aren't matching heights */
+            flex-grow: 1;
+            transition: background-color 0.3s;
+
+            &:hover {
+                color: #fff;
+                background-color: var(--primary);
+            }
+        }
+
+        .cs-name {
+            font-size: (20/16rem);
+            font-weight: bold;
+            margin: 0;
+            margin: 0 0 (4/16rem);
+            gap: (16/16rem);
+            transition: color 0.3s;
+        }
+
+        .cs-job {
+            transition: color 0.3s;
+        }
+
+        .cs-social {
+            display: flex;
+            gap: (8/16rem);
+            position: absolute;
+            right: 50%;
+            bottom: (24/16rem);
+            z-index: 1;
+            transform: translateX(50%);
+        }
+
+        .cs-link {
+            width: (40/16rem);
+            height: (40/16rem);
+            background-color: #fff;
+            opacity: 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(1rem);
+            transition:
+                transform 0.3s,
+                opacity 0.3s;
+
+            &:hover {
+                .cs-icon {
+                    /* use this pen to generate a filter from black to a color of your choosing */
+                    /* https://codepen.io/sosuke/pen/Pjoqqp */
+                    filter: invert(55%) sepia(42%) saturate(4845%)
+                        hue-rotate(337deg) brightness(101%) contrast(98%);
+                }
+            }
+
+            &:first-of-type,
+            &:last-of-type {
+                margin-top: (-20/16rem);
+            }
+
+            &:nth-of-type(1) {
+                transition-delay: 0.05s;
+            }
+
+            &:nth-of-type(2) {
+                transition-delay: 0.1s;
+            }
+
+            &:nth-of-type(3) {
+                transition-delay: 0.15s;
+            }
+
+            &:nth-of-type(4) {
+                transition-delay: 0.2s;
+            }
+        }
+
+        .cs-bubbles {
+            width: (321/16rem);
+            height: (423/16rem);
+            display: none;
+            position: absolute;
+            top: (-116/16rem);
+            left: (-194/16rem);
+            z-index: -1;
+
+            &:before {
+                /* white border bubble */
+                content: "";
+                width: (264/16rem);
+                height: (264/16rem);
+                background: transparent;
+                opacity: 1;
+                border: 1px solid #1a1a1a;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                animation-name: floatAnimation;
+                animation-duration: 5s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+            }
+
+            &:after {
+                /* orange bubble */
+                content: "";
+                width: (264/16rem);
+                height: (264/16rem);
+                background: var(--primary);
+                opacity: 0.1;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                animation-name: floatAnimation2;
+                animation-duration: 14s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+/* Tablet - 500px */
+@media only screen and (min-width: 31.25rem) {
+    #meet-team-1348 {
+        .cs-item {
+            grid-column: 5 / 10;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #meet-team-1348 {
+        .cs-card-group {
+            max-width: none;
+        }
+
+        .cs-item {
+            grid-column: 6 / 9;
+        }
+
+        .cs-bubbles {
+            display: block;
+        }
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #meet-team-1348 {
+        .cs-bubbles {
+            top: (126/16rem);
+            left: (-188/16rem);
+        }
+    }
+}
+
+                                
+
+/*-- -------------------------- -->
 <---           Stats            -->
 <--- -------------------------- -*/
 
@@ -2563,7 +2829,6 @@ html {
             opacity: 1;
             transform: translateX(-50%);
             display: block;
-            background: url("/assets/svgs/cta-squares.svg");
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
