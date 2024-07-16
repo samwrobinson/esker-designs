@@ -507,6 +507,8 @@
     /* 28px - 40px left & right */
     padding: clamp(2rem, 3vw, 2.5rem) clamp(1.75rem, 3vw, 2.5rem);
     background-color: #fafbfc;
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     box-sizing: border-box;
     transition: background-color 0.3s, transform 0.3s;
   }
