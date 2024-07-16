@@ -1,14 +1,13 @@
 module.exports = {
     "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "email": "samwillrobinson@gmail.com",
+    "phoneForTel": "828-989-1290",
+    "phoneFormatted": "(828) 989-1290",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
+        "lineOne": "426 Robinson Rd.",
+        "city": "Warren",
+        "state": "VT",
+        "zip": "05674",
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
     "socials": {
