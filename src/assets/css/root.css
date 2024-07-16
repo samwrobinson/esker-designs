@@ -25,6 +25,9 @@
     margin: 0;
     padding: 0;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   .emphasis {
     color: #43b7ff;
     font-weight: bold;
@@ -226,9 +229,9 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #stats-543 .cs-circles {
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
@@ -428,7 +431,9 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #why-choose-1571 .cs-container {
-    max-width: 80rem;
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   #why-choose-1571 .cs-card-wrapper {
     align-items: center;
@@ -465,7 +470,7 @@
     padding: var(--sectionPadding);
   }
   #services-285 .cs-container {
-    width: 100%;
+    width: 80%;
     max-width: 80rem;
     margin: auto;
     display: flex;
