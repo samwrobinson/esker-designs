@@ -48,7 +48,7 @@ eleventyNavigation:
             <p class="cs-text">
                 No page builders or WordPress - We offer superior 100% hand-coded websites with starting at $150/mo.
             </p>
-            <a href="" class="cs-button-solid">Free Consultation</a>
+            <a href="/contact" class="cs-button-solid">Free Consultation</a>
         </div>
     </div>
     <!--Bubble Groups-->
@@ -123,7 +123,11 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Why Choose us</span>
-            <h2 class="cs-title"><span class="emphasis">$0</span> Down, <span class="emphasis">$125</span> Per Month, Year-Long Minimum Contract</h2>
+            <h2 class="cs-title"><span class="emphasis">$0</span> Down, <span class="emphasis">$150</span> Per Month, Year-Long Minimum Contract</h2>
+            <p class="cs-text">Get started with a standard 5-page small business website for $0 down. If you need more pages, we can create a custom plan based on your specific needs and the scope of the project.
+            <br>
+            <br>
+            You’ll own your domain, content, listings, and profiles. Plus, you can cancel anytime without any fees or hassle.</p>
         </div>
         <div class="cs-card-wrapper">
             <ul class="cs-card-group">
@@ -255,73 +259,26 @@ eleventyNavigation:
     <div class="cs-bubbles" aria-hidden="true"></div>
 </section>
 
-<!-- ============================================ -->
-<!--                   Stats                      -->
-<!-- ============================================ -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('a.cs-li-link');
 
-<!-- <section id="stats-543">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Our Performance</span>
-            <h2 class="cs-title">Web Design Company You Can Trust</h2>
-            <p class="cs-text">
-                Our web design company specializes in the professional creation of clean, fast, and personalized websites. 
-            </p>
-        </div> -->
-        <!--SVG Circles-->
-        <!-- <ul class="cs-circles">
-            <li class="cs-item">
-                <div class="cs-ring-wrapper">
-                    <span class="cs-number">50<span class="cs-percentage">%</span></span> -->
-                    <!--Change the --ratio to the decimal percentage of this circle-->
-                    <!-- <svg class="cs-ring" style="--ratio: 0.50">
-                        <circle cx="50%" cy="50%" r="50%"/>
-                        <circle cx="50%" cy="50%" r="50%"/>
-                    </svg>
-                </div>
-                <h3 class="cs-h3">Page Speed</h3>
-                <span class="cs-desc">Hand-coded websites are typically 30-50% faster than those built with page builders due to cleaner, leaner code.</span>
-            </li>
-            <li class="cs-item">
-                <div class="cs-ring-wrapper">
-                    <span class="cs-number">64<span class="cs-percentage">%</span></span> -->
-                    <!--Change the --ratio to the decimal percentage of this circle-->
-                    <!-- <svg class="cs-ring" style="--ratio: 0.64">
-                        <circle cx="50%" cy="50%" r="50%"/>
-                        <circle cx="50%" cy="50%" r="50%"/>
-                    </svg>
-                </div>
-                <h3 class="cs-h3">Cost Savings</h3>
-                <span class="cs-desc">64% of companies say that improving website performance significantly lowers their operational costs.</span>
-            </li>
-            <li class="cs-item">
-                <div class="cs-ring-wrapper">
-                    <span class="cs-number">60<span class="cs-percentage">%</span></span> -->
-                    <!--Change the --ratio to the decimal percentage of this circle-->
-                    <!-- <svg class="cs-ring" style="--ratio: 0.60">
-                        <circle cx="50%" cy="50%" r="50%"/>
-                        <circle cx="50%" cy="50%" r="50%"/>
-                    </svg>
-                </div>
-                <h3 class="cs-h3">Mobile-First</h3>
-                <span class="cs-desc">60% of all internet traffic is on mobile devices. We make sure to account for this in our code, every time.</span>
-            </li>
-            <li class="cs-item">
-                <div class="cs-ring-wrapper">
-                    <span class="cs-number">10<span class="cs-percentage">%</span></span> -->
-                    <!--Change the --ratio to the decimal percentage of this circle-->
-                    <!-- <svg class="cs-ring" style="--ratio: 0.10">
-                        <circle cx="50%" cy="50%" r="50%"/>
-                        <circle cx="50%" cy="50%" r="50%"/>
-                    </svg>
-                </div>
-                <h3 class="cs-h3">SEO</h3>
-                <span class="cs-desc">Hand-coded websites have cleaner HTML and CSS. Websites with clean, semantic HTML see up to a 10% increase in search engine visibility.</span>
-            </li>
-        </ul>
-    </div>
-</section> -->
-                                                 
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('/index#')) {
+                const targetId = href.split('#')[1];
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    event.preventDefault();
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
+</script>                                 
 
     {% include 'components/cta.html' %}
 {% endblock %}
