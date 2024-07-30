@@ -6,16 +6,41 @@
 
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
+
+/* montserrat-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/montserrat-v26-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/montserrat-v26-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
     // Website colors
 :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
+    --primary: #f6ae2d;
+    --primaryLight: #6e9887;
+    --secondary: #f24236;
     --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
-    --bodyTextColorWhite: #fafbfc;
+    --bodyTextColor: #2f4858;
+    --bodyTextColorWhite: #fff9fb;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -634,7 +659,8 @@ html {
         }
 
         .cs-picture {
-            margin: 0 auto;
+            height: 100%;
+            width: 100%;
             border-radius: 50%;
             display: block;
             position: relative;
@@ -788,6 +814,27 @@ html {
                 animation-fill-mode: forwards;
             }
         }
+        .blob-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .blob-wrapper::before {
+            content: url(/assets/svgs/blob.svg);
+            position: absolute;
+            height: 110%; /* Increase the height slightly */
+            width: 110%;  /* Increase the width slightly */
+            top: 50%;     /* Center vertically */
+            left: 50%;    /* Center horizontally */
+            transform: translate(-50%, -50%); /* Centering adjustment */
+            z-index: -1;
+            opacity: 0.9;
+        }
+        
     }
 }
 
@@ -805,12 +852,29 @@ html {
     #meet-team-1348 {
         .cs-card-group {
             max-width: none;
+            width: 100%;
+            /* max-width is removed on tablet */
+            max-width: (700/16rem);
+            margin: 0;
+            padding: 0;
+            display: grid;
+            align-items: stretch;
+            grid-template-columns: repeat(12, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 2vw, 1.25rem);
+            position: relative;
         }
-
         .cs-item {
-            grid-column: 6 / 9;
+            grid-column: 4 / 10;
         }
-
+        svg {
+            left: 0%;
+        }
+        .cs-content {
+            text-align: left;
+            max-width: (413/16rem);
+            align-items: start;
+        }
         .cs-bubbles {
             display: block;
         }
@@ -1500,7 +1564,8 @@ html {
         margin: 0;
         overflow-x: hidden;
         padding: 0;
-        font-family: "Roboto", Arial, sans-serif;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
         font-size: 100%;
         color: var(--bodyTextColor);
     }
@@ -1560,35 +1625,6 @@ html {
         top: 0;
         left: 0;
         opacity: 0;
-    }
-    // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
-
-    /* roboto-regular - latin */
-    @font-face {
-        font-style: normal;
-        font-family: "Roboto";
-        font-weight: 400;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    /* roboto-700 - latin */
-    @font-face {
-        font-style: normal;
-        font-family: "Roboto";
-        font-weight: 700;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    /* roboto-900 - latin */
-    @font-face {
-        font-style: normal;
-        font-family: "Roboto";
-        font-weight: 900;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 }
 
@@ -1677,7 +1713,7 @@ html {
     }
     #cs-navigation .cs-container .cs-logo img {
       width: auto;
-      height: 100px;
+      height: 50px;
       /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
       object-fit: contain;
       /* places the image to the left edge of the parent */
@@ -2028,8 +2064,6 @@ html {
       /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
       padding: 0 1rem;
-      background-color: #fff;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
     }
@@ -2239,14 +2273,12 @@ html {
     #cs-navigation {
         z-index: 10000;
         position: fixed;
-        background-color: #fff;
         width: 100%;
         /* prevents padding from affecting height and width */
         box-sizing: border-box;
         padding: (12/16rem) calc(16 / 16 * 1rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        font-family: "Montserrat", sans-serif;
 
         .cs-container {
             display: flex;
@@ -2652,12 +2684,10 @@ html {
             transform: scaleY(0);
             border-bottom: 5px solid var(--primary);
             margin: 0;
-            background-color: #fff;
             min-width: (200/16rem);
             overflow: hidden;
             padding: 0;
             transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
             transform-origin: top;
         }
 
@@ -2779,19 +2809,19 @@ html {
         z-index: 10000;
         position: fixed;
         background-color: #fff;
+        opacity: 90%;
         width: 100%;
         /* prevents padding from affecting height and width */
         box-sizing: border-box;
         padding: 0 (16/16rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        font-family: "Montserrat", sans-serif;
 
         .cs-container {
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: center;
-            margin: auto;
+            margin: 0;
             max-width: (1280/16rem);
             width: 100%;
             gap: (24/16rem);
@@ -2807,7 +2837,7 @@ html {
             justify-content: center;
             align-items: center;
             /* margin-right auto pushes everything away from it to the right */
-            margin: 0 auto 0 0;
+            margin: 0;
             height: (65/16rem);
             max-width: (350/16rem);
             width: 18.4%;
