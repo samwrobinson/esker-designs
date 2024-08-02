@@ -42,6 +42,8 @@
   }
   #hero-1951 .cs-text {
     margin-bottom: 1.25rem;
+    z-index: 10;
+    width: 50%;
   }
   #hero-1951 .cs-button-solid {
     font-size: 1rem;
@@ -185,6 +187,9 @@
   #hero-1951 .cs-reviews {
     text-align: left;
     flex-direction: row;
+  }
+  #hero-1951 .cs-text {
+    width: 100%;
   }
   #hero-1951 .cs-picture {
     width: 50%;
