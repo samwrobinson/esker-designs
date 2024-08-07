@@ -948,7 +948,7 @@
   }
   #meet-team-1348 .cs-content {
     text-align: left;
-    max-width: 25.8125rem;
+    max-width: 34.375rem;
     align-items: start;
   }
   #meet-team-1348 .cs-bubbles {
@@ -1170,6 +1170,7 @@
     /* centers the button */
     text-align: center;
     padding: var(--sectionPadding);
+    padding-top: 6rem;
   }
   #services-285 .cs-container {
     width: 80%;
