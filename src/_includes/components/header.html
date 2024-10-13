@@ -22,12 +22,12 @@
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="/index" class="cs-li-link cs-active">
+                        <a href="/index" class="cs-li-link {% if page.url == '/' %} cs-active {% endif %}">
                             home
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/index#services-285" class="cs-li-link">
+                        <a href="/service" class="cs-li-link {% if page.url == '/service/' %} cs-active {% endif %}">
                             service
                         </a>
                     </li>
@@ -69,12 +69,12 @@
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/about" class="cs-li-link">
+                        <a href="/about" class="cs-li-link {% if page.url == '/about/' %} cs-active {% endif %}">
                             about
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/contact" class="cs-li-link">
+                        <a href="/contact" class="cs-li-link {% if page.url == '/contact/' %} cs-active {% endif %}">
                             contact
                         </a>
                     </li>

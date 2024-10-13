@@ -1,0 +1,111 @@
+---
+title: 'Vermont Web Design & Development | Esker Designs'
+description: 'We are a premier web design and development agency in Vermont with a reputation for our professional designs and custom coded websites that load fast and perform better than page builders. See what we can do for you today!'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'service/'
+eleventyNavigation:
+    key: Project One
+    order: 3100
+    parent: Projects
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/projects.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1402">
+    <div class="cs-container">
+        <span class="cs-int-title">Vermont Web Design & Development</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/summit.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/summit.webp">
+        <img decoding="async" src="/assets/images/summit.webp" alt="people laughing" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+                                
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+
+<section id="content-page-1402">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <div class="cs-flex">
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/june-bug.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/june-bug.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/june-bug.webp" alt="people" width="542" height="728">
+                </picture>
+            </div>
+        </div>
+        <div class="cs-content">
+            <h1 class="cs-title">Professional <span class="cs-color">Web Design</span> & Development Services</h1>
+            <h2>Custom Code - No Page Builders Or Wordpress</h2>
+            <p>
+                At Esker Designs, we take a different approach to web design. Unlike page builders or WordPress, we hand-code every website from scratch. This ensures fully customized designs without any bloated code to slow down performance. Our websites load instantly, score highly on Google PageSpeed Insights, and are significantly more secure. With no reliance on plugins or frequent updates, our websites provide long-term stability and are highly resistant to security vulnerabilities.
+            </p>
+            <h3>WHY IT MATTERS</h3>
+            <ol>
+                <li>Faster load times</li>
+                <li>Better conversions</li>
+                <li>Better performing ads</li>
+                <li>More secure</li>
+                <li>Better ranking on Google</li>
+                <li>Boosts your google business profile in the Maps Listings</li>
+            </ol>
+            <h4>FASTER LOAD TIMES LEAD TO HIGHER CONVERSIONS</h4>
+            <p>
+                In today's competitive online market, having a fast-loading website gives you an edge over the competition. Many websites built using page builders experience slow load times, but with our custom-coded Vermont web development, your site will load almost instantly. If your site takes more than 3 seconds to load, up to 50% of your visitors may leave. Our hand-coded Vermont web design ensures visitors stay on your site, leading to more conversions and better results than typical page builders.
+            </p>
+            <h4>ENHANCED AD PERFORMANCE</h4>
+            <p>
+                A fast-loading website not only boosts user experience but also improves ad performance. Google favors faster sites, which leads to better ad conversions and lower cost-per-click rates, saving you money. With our custom Vermont web design services, your site will load quickly and increase the effectiveness of your ads.
+            </p>
+            <h4>MORE SECURE CUSTOM WEBSITES</h4>
+            <p>
+                Platforms like WordPress come with vulnerabilities due to their reliance on plugins, increasing the risk of hacking. With our Vermont web development approach, <strong class="cs-color">we eliminate those risks</strong> by using static HTML and CSS, with no databases or server-side scripts for hackers to exploit. Our custom-coded websites provide the highest level of security, requiring no frequent updates.
+            </p>
+            <h4>BOOST YOUR SEARCH RANKINGS</h4>
+            <p>
+                Faster load times improve your ranking on Google in several ways. Google rewards websites that perform better, and speed is a key factor. When two sites have similar content and authority, the faster site with better Page Speed Scores and Core Web Vitals will rank higher.
+                <br>
+                <br>
+                A faster website also keeps visitors engaged longer, reducing bounce rates and increasing session times. As more users click through your pages, Google sees your site as valuable, boosting your ranking. By focusing on speed and usability, we help your Vermont web design stand out, attract more traffic, and rank better on Google.
+            </p>
+            <h4>BOOST YOUR GOOGLE BUSINESS PROFILE</h4>
+            <p>
+                A faster website also enhances your Google Business Profile, increasing visibility in local maps searches. By combining fast load times, five-star reviews, and a complete business profile, your Vermont-based business can drive more leads and conversions from local searches.
+            </p>
+        </div>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+                                
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}
