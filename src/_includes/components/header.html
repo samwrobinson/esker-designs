@@ -6,7 +6,7 @@
     <div class="cs-container">
         <!--Nav Logo-->
         <a href="/index" class="cs-logo" aria-label="back to home">
-            <img src="/assets/svgs/logo-reduced-V2.svg" alt="logo" width="400" height="auto" aria-hidden="true" decoding="async">
+            <img src="{% getUrl "/assets/images/logo.png" | resize({ width: 50, height: 50}) %}" alt="logo" width="400" height="auto" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
         <nav class="cs-nav" role="navigation">
