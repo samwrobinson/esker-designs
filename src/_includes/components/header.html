@@ -6,7 +6,11 @@
     <div class="cs-container">
         <!--Nav Logo-->
         <a href="/index" class="cs-logo" aria-label="back to home">
-            <img src="{% getUrl "/assets/images/logo.png" | resize({ width: 50, height: 50}) %}" alt="logo" width="400" height="auto" aria-hidden="true" decoding="async">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" src="{% getUrl "/assets/images/logo.png" | resize({ width: 50, height: 50}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/logo.png" | resize({ width: 75, height: 75}) | webp %}">
+                <img decoding="async" src="{% getUrl "/assets/images/logo.png" | resize({ width: 75, height: 75}) | webp %}" alt="logo" width="400" height="auto" aria-hidden="true" decoding="async">
+            </picture>
         </a>
         <!--Navigation List-->
         <nav class="cs-nav" role="navigation">

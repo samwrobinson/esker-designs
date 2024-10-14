@@ -66,7 +66,7 @@ eleventyNavigation:
             <a class="cs-button-solid" href="#services-285">Learn more</a>
         </div>
         <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/header-mockup.webp">
+            <source media="(max-width: 600px)" src="{% getUrl "/assets/images/header-mockup.webp" | resize({ width: 305, height: 196}) %}>
             <source media="(min-width: 601px)" srcset="/assets/images/header-mockup.webp">
             <img decoding="async" src="/assets/images/header-mockup.webp" alt="Decorative squiggles" loading="lazy" width="305" height="600" aria-hidden="true">
         </picture>
