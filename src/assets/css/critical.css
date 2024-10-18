@@ -211,11 +211,12 @@
     width: 100%;
   }
   #hero-1951 .cs-picture {
-    width: 50%;
-    height: 100%;
+    max-height: 500px;
+    max-width: 500px;
     margin: 0;
     overflow: hidden;
     display: block;
+    top: 40%;
     position: absolute;
     z-index: 1;
   }
@@ -242,13 +243,31 @@
     align-items: flex-start;
     align-self: center;
   }
-  #hero-1951 .cs-picture {
-    height: 100%;
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 100rem) {
+  #hero-1951 .cs-container {
+    max-width: 75%;
+    flex-direction: row;
+    align-items: stretch;
   }
-  #hero-1951 .cs-picture img {
-    width: 500px;
-    right: 0;
+  #hero-1951 .cs-content {
+    text-align: left;
+    /* 48px - 80px */
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    align-items: flex-start;
+    align-self: center;
+  }
+  #hero-1951 .cs-picture {
+    max-height: 750px;
+    max-width: 900px;
+    margin: 0;
+    margin-left: 4rem;
+    overflow: hidden;
+    display: block;
+    top: 40%;
+    right: 10%;
     position: absolute;
-    bottom: -270px;
+    z-index: 1;
   }
 }
