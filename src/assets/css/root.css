@@ -689,8 +689,12 @@
   }
   #services-344 .cs-item {
     height: 35vh;
-    width: 30%;
+    max-width: 30%;
     min-height: 350px;
+  }
+  #services-344 .cs-icon {
+    height: 7rem;
+    width: auto;
   }
 }
 /* Tablet - 768px */
@@ -700,6 +704,10 @@
     max-height: 450px;
     min-height: 350px;
     width: 30%;
+  }
+  #services-344 .cs-icon {
+    height: 8rem;
+    width: auto;
   }
 }
 /*-- -------------------------- -->
