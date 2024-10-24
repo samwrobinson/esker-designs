@@ -1,6 +1,6 @@
 module.exports = {
-    "name": "Code Stitch Web Designs",
-    "email": "samwillrobinson@gmail.com",
+    "name": "Esker Designs",
+    "email": "sam@eskerdesigns.com",
     "phoneForTel": "828-989-1290",
     "phoneFormatted": "(828) 989-1290",
     "address": {
