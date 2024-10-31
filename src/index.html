@@ -348,7 +348,31 @@ eleventyNavigation:
     <div class="cs-bubbles" aria-hidden="true"></div>
 </section>
 
-                                
+<!-- ============================================ -->
+<!--                Pop Up Modal                  -->
+<!-- ============================================ --> 
+
+<div id="cs-modal-1605" style="z-index: -10">
+    <div class="cs-wrapper">
+        <button id="cs-close-1605" class="cs-close" aria-label="close pop up">
+            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Close.svg" alt="clothing" width="24" height="24" aria-hidden="true">
+        </button>
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/ecom.png" | resize({width: 686, height: 550}) | webp %}">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}">
+            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}" alt="clothing" width="413" height="500">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-header">
+                We are now offering E-commerce Store Development!
+            </span>
+            <p>Click below to view our demo site.</p>
+            <a href="https://upland-ecommerce.netlify.app/" target="_blank" class="cs-button-solid">View Site</a>
+        </div>
+    </div>
+</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
