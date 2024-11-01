@@ -76,7 +76,7 @@ eleventyNavigation:
         <picture class="cs-picture">
             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 300, height: 279}) | webp({quality: 30}) %}">
             <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 500, height: 500}) | webp({quality: 30}) %}">
-            <img decoding="async" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 500, height: 500}) | webp({quality: 30}) %}" alt="Decorative squiggles" loading="lazy" width="305" height="600" aria-hidden="true">
+            <img decoding="async" src="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 500, height: 500}) | webp({quality: 30}) %}" alt="Decorative squiggles" loading="lazy" width="305" height="600" aria-hidden="true">
         </picture>
     </div>
 </section>
@@ -168,7 +168,7 @@ eleventyNavigation:
                 <li class="cs-item">
                     <picture class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
-                                srcset="assets/images/checkmark.svg"
+                                src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
                     </picture>
                     <div class="cs-flex">
@@ -182,7 +182,7 @@ eleventyNavigation:
                 <li class="cs-item">
                     <picture class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
-                                srcset="assets/images/checkmark.svg"
+                                src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
                     </picture>
                     <div class="cs-flex">
@@ -196,7 +196,7 @@ eleventyNavigation:
                 <li class="cs-item">
                     <picture class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
-                                srcset="assets/images/checkmark.svg"
+                                src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
                     </picture>
                     <div class="cs-flex">
@@ -214,14 +214,14 @@ eleventyNavigation:
                 <source media="(min-width: 601px)"
                         srcset="assets/images/webicons.webp">
                 <img loading="lazy" decoding="async"
-                        srcset="assets/images/webicons.webp" alt="icons"
+                        src="assets/images/webicons.webp" alt="icons"
                         width="510" height="193" aria-hidden="true">
             </picture>
             <ul class="cs-card-group">
                 <li class="cs-item">
                     <picture class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
-                                srcset="assets/images/checkmark.svg"
+                                src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
                     </picture>
                     <div class="cs-flex">
@@ -235,7 +235,7 @@ eleventyNavigation:
                 <li class="cs-item">
                     <picture class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
-                                srcset="assets/images/checkmark.svg"
+                                src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
                     </picture>
                     <div class="cs-flex">
@@ -249,7 +249,7 @@ eleventyNavigation:
                 <li class="cs-item">
                     <picture class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
-                                srcset="assets/images/checkmark.svg"
+                                src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
                     </picture>
                     <div class="cs-flex">
@@ -278,7 +278,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <a href="https://barerootscounseling.org/" target="_blank" class="cs-link">
                     <picture class="cs-picture">
-                        <img class="cs-icon" srcset="{% getUrl "/assets/images/portfolio-1.webp" | resize({ width: 266, height: 144}) %}" loading="lazy" decoding="async" alt="Bareroots Counseling Website, Designed by Esker Designs in Vermont" width="32" height="32" aria-hidden="true">
+                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-1.webp" | resize({ width: 266, height: 144}) %}" loading="lazy" decoding="async" alt="Bareroots Counseling Website, Designed by Esker Designs in Vermont" width="32" height="32" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Bareroots Counseling</h3>
                     <p class="cs-item-text">
@@ -289,7 +289,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <a href="https://peak-pressurewash.com/" target="_blank" class="cs-link">
                     <picture class="cs-picture">
-                        <img class="cs-icon" srcset="{% getUrl "/assets/images/portfolio-2.webp" | resize({ width: 253, height: 144}) %}" loading="lazy" decoding="async" alt="Peak Pressure Wash Website, Designed by Esker Designs in Vermont" width="32" height="32" aria-hidden="true">
+                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-2.webp" | resize({ width: 253, height: 144}) %}" loading="lazy" decoding="async" alt="Peak Pressure Wash Website, Designed by Esker Designs in Vermont" width="32" height="32" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Peak Pressure Wash</h3>
                     <p class="cs-item-text">
@@ -300,7 +300,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <a href="https://alpenglowcounselingvt.com/" target="_blank" class="cs-link">
                     <picture class="cs-picture">
-                        <img class="cs-icon" srcset="{% getUrl "/assets/images/portfolio-3.png" | resize({ width: 253, height: 144}) | webp %}" loading="lazy" decoding="async" alt="Alpenglow Counseling Website, Designed by Esker Designs in Vermont" width="32" height="32" aria-hidden="true">
+                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-3.png" | resize({ width: 253, height: 144}) | webp %}" loading="lazy" decoding="async" alt="Alpenglow Counseling Website, Designed by Esker Designs in Vermont" width="32" height="32" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Alpenglow Counseling</h3>
                     <p class="cs-item-text">
@@ -346,7 +346,7 @@ eleventyNavigation:
                             <source media="(min-width: 601px)"
                                     srcset="assets/images/sam-port-v3.webp">
                             <img decoding="async"
-                                    srcset="assets/images/sam-portrait.webp"
+                                    src="assets/images/sam-portrait.webp"
                                     alt="person" width="413" height="374" loading="lazy" aria-hidden="true">
                         </picture>
                     </div>
@@ -370,7 +370,7 @@ eleventyNavigation:
             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/ecom.png" | resize({width: 686, height: 550}) | webp %}">
             <!--Tablet and above Image-->
             <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}">
-            <img loading="lazy" decoding="async" srcset="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}" alt="clothing" width="413" height="500">
+            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}" alt="clothing" width="413" height="500">
         </picture>
         <div class="cs-content">
             <span class="cs-header">
