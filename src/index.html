@@ -60,6 +60,11 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="hero-1951">
+    <picture class="cs-bg">
+        <source media="(max-width: 800px)" srcset="{% getUrl "/assets/images/blob-m.png" | resize({width: 750, height: 1300}) | webp %}">
+        <source media="(min-width: 801px)" srcset="{% getUrl "/assets/images/blob-svg.svg" | resize({width: 1415, height: 722}) | webp %}">
+        <img decoding="async" src="{% getUrl "/assets/images/blob-svg.png" | resize({width: 1415, height: 722}) | webp %}" alt="pancake" aria-hidden="true">
+    </picture>
     <div class="cs-container">
         <div class="cs-content">
             <h5 class="cs-topper">Welcome to Esker Designs</h5>
@@ -76,7 +81,7 @@ eleventyNavigation:
         <picture class="cs-picture">
             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 300, height: 279}) | webp({quality: 30}) %}">
             <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 500, height: 500}) | webp({quality: 30}) %}">
-            <img decoding="async" src="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 500, height: 500}) | webp({quality: 30}) %}" alt="Decorative squiggles" loading="lazy" width="305" height="600" aria-hidden="true">
+            <img decoding="async" src="/assets/images/header-mockup.webp" alt="Decorative squiggles" loading="lazy" width="305" height="600" aria-hidden="true">
         </picture>
     </div>
 </section>

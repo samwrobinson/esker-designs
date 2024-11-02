@@ -5,10 +5,6 @@
 @media only screen and (min-width: 0rem) {
   #hero-1951 {
     padding: var(--sectionPadding);
-    background-image: url(/assets/images/blob-svg.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top right;
     background-color: #fff;
     padding-top: 10rem;
     position: relative;
@@ -192,6 +188,24 @@
     top: 0;
     right: 50;
   }
+  #hero-1951 .cs-bg {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  #hero-1951 .cs-bg img {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
@@ -239,7 +253,6 @@
   #hero-1951 .cs-content {
     text-align: left;
     /* 48px - 80px */
-    padding: clamp(3rem, 6vw, 5rem) 0;
     align-items: flex-start;
     align-self: center;
   }
