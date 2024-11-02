@@ -79,9 +79,9 @@ eleventyNavigation:
             <a href="/index#services-285" class="cs-button-solid">Learn more</a>
         </div>
         <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 300, height: 279}) | webp({quality: 30}) %}">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 420, height: 400}) | webp({quality: 30}) %}">
             <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 500, height: 500}) | webp({quality: 30}) %}">
-            <img decoding="async" src="/assets/images/header-mockup.webp" alt="Decorative squiggles" loading="lazy" width="305" height="600" aria-hidden="true">
+            <img decoding="async" src="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 500, height: 500}) | webp({quality: 30}) %}" alt="Decorative squiggles" loading="lazy" aria-hidden="true">
         </picture>
     </div>
 </section>
@@ -106,9 +106,9 @@ eleventyNavigation:
         <ul class="cs-card-group">
             <li class="cs-item">
                 <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" srcset="assets/images/mobile-first-v2.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
-                    </picture>
+                    <div class="cs-picture">
+                        <img class="cs-icon" src="assets/images/mobile-first-v2.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
+                    </div>
                     <h3 class="cs-h3">Custom Web Development</h3>
                     <p class="cs-item-text">
                         No page builders or WordPress here — every website we create is hand-coded
@@ -119,9 +119,9 @@ eleventyNavigation:
             </li>
             <li class="cs-item">
                 <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" srcset="assets/images/responsive.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
-                    </picture>
+                    <div class="cs-picture">
+                        <img class="cs-icon" src="assets/images/responsive.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
+                    </div>
                     <h3 class="cs-h3">Search Engine Optimization (SEO)</h3>
                     <p class="cs-item-text">
                         We make sure your website is easy for search engines to find so more people
@@ -132,9 +132,9 @@ eleventyNavigation:
             </li>
             <li class="cs-item">
                 <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" srcset="assets/images/optimize.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
-                    </picture>
+                    <div class="cs-picture">
+                        <img class="cs-icon" src="assets/images/optimize.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
+                    </div>
                     <h3 class="cs-h3">Website Management</h3>
                     <p class="cs-item-text">
                         Enjoy a personalized, hand-coded website that ranks higher in search
@@ -171,11 +171,11 @@ eleventyNavigation:
         <div class="cs-card-wrapper">
             <ul class="cs-card-group">
                 <li class="cs-item">
-                    <picture class="cs-icon-wrapper">
+                    <div class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
                                 src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
-                    </picture>
+                    </div>
                     <div class="cs-flex">
                         <h3 class="cs-h3">Hosting Fees Included</h3>
                         <p class="cs-item-text">
@@ -185,11 +185,11 @@ eleventyNavigation:
                     </div>
                 </li>
                 <li class="cs-item">
-                    <picture class="cs-icon-wrapper">
+                    <div class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
                                 src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
-                    </picture>
+                    </div>
                     <div class="cs-flex">
                         <h3 class="cs-h3">24/7 Customer Service</h3>
                         <p class="cs-item-text">
@@ -199,11 +199,11 @@ eleventyNavigation:
                     </div>
                 </li>
                 <li class="cs-item">
-                    <picture class="cs-icon-wrapper">
+                    <div class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
                                 src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
-                    </picture>
+                    </div>
                     <div class="cs-flex">
                         <h3 class="cs-h3">Unlimited edits</h3>
                         <p class="cs-item-text">
@@ -215,20 +215,20 @@ eleventyNavigation:
             </ul>
             <picture class="cs-image">
                 <source media="(max-width: 600px)"
-                        srcset="assets/images/webicons.webp">
+                        srcset="{% getUrl "/assets/images/webicons.webp" | resize({width: 525, height: 525}) %}">
                 <source media="(min-width: 601px)"
-                        srcset="assets/images/webicons.webp">
+                        srcset="{% getUrl "/assets/images/webicons.webp" | resize({width: 614, height: 614}) %}">
                 <img loading="lazy" decoding="async"
-                        src="assets/images/webicons.webp" alt="icons"
-                        width="510" height="193" aria-hidden="true">
+                        src="{% getUrl "/assets/images/webicons.webp" | resize({width: 614, height: 614}) %}" alt="icons"
+                        aria-hidden="true">
             </picture>
             <ul class="cs-card-group">
                 <li class="cs-item">
-                    <picture class="cs-icon-wrapper">
+                    <div class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
                                 src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
-                    </picture>
+                    </div>
                     <div class="cs-flex">
                         <h3 class="cs-h3">Custom Web Development & Design</h3>
                         <p class="cs-item-text">
@@ -238,11 +238,11 @@ eleventyNavigation:
                     </div>
                 </li>
                 <li class="cs-item">
-                    <picture class="cs-icon-wrapper">
+                    <div class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
                                 src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
-                    </picture>
+                    </div>
                     <div class="cs-flex">
                         <h3 class="cs-h3">Ongoing Website Maintenance</h3>
                         <p class="cs-item-text">
@@ -252,11 +252,11 @@ eleventyNavigation:
                     </div>
                 </li>
                 <li class="cs-item">
-                    <picture class="cs-icon-wrapper">
+                    <div class="cs-icon-wrapper">
                         <img class="cs-icon" loading="lazy" decoding="async"
                                 src="assets/images/checkmark.svg"
                                 alt="car" width="24" height="24" aria-hidden="true">
-                    </picture>
+                    </div>
                     <div class="cs-flex">
                         <h3 class="cs-h3">Better Results</h3>
                         <p class="cs-item-text">
@@ -282,9 +282,9 @@ eleventyNavigation:
         <ul class="cs-card-group">
             <li class="cs-item">
                 <a href="https://barerootscounseling.org/" target="_blank" class="cs-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-1.webp" | resize({ width: 266, height: 144}) %}" loading="lazy" decoding="async" alt="Bareroots Counseling Website, Designed by Esker Designs in Vermont" width="32" height="32" aria-hidden="true">
-                    </picture>
+                    <div class="cs-picture">
+                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-1.webp" | resize({ width: 266, height: 144}) %}" loading="lazy" decoding="async" alt="Bareroots Counseling Website, Designed by Esker Designs in Vermont" aria-hidden="true">
+                    </div>
                     <h3 class="cs-h3">Bareroots Counseling</h3>
                     <p class="cs-item-text">
                         See our work in action. Click here to view our recent projects.
@@ -293,9 +293,9 @@ eleventyNavigation:
             </li>
             <li class="cs-item">
                 <a href="https://peak-pressurewash.com/" target="_blank" class="cs-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-2.webp" | resize({ width: 253, height: 144}) %}" loading="lazy" decoding="async" alt="Peak Pressure Wash Website, Designed by Esker Designs in Vermont" width="32" height="32" aria-hidden="true">
-                    </picture>
+                    <div class="cs-picture">
+                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-2.webp" | resize({ width: 253, height: 144}) %}" loading="lazy" decoding="async" alt="Peak Pressure Wash Website, Designed by Esker Designs in Vermont" aria-hidden="true">
+                    </div>
                     <h3 class="cs-h3">Peak Pressure Wash</h3>
                     <p class="cs-item-text">
                         See our work in action. Click here to view our recent projects.
@@ -304,9 +304,9 @@ eleventyNavigation:
             </li>
             <li class="cs-item">
                 <a href="https://alpenglowcounselingvt.com/" target="_blank" class="cs-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-3.png" | resize({ width: 253, height: 144}) | webp %}" loading="lazy" decoding="async" alt="Alpenglow Counseling Website, Designed by Esker Designs in Vermont" width="32" height="32" aria-hidden="true">
-                    </picture>
+                    <div class="cs-picture">
+                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-3.png" | resize({ width: 253, height: 144}) | webp %}" width="253" height="144" loading="lazy" decoding="async" alt="Alpenglow Counseling Website, Designed by Esker Designs in Vermont" aria-hidden="true">
+                    </div>
                     <h3 class="cs-h3">Alpenglow Counseling</h3>
                     <p class="cs-item-text">
                         See our work in action. Click here to view our recent projects.
@@ -368,14 +368,14 @@ eleventyNavigation:
 <div id="cs-modal-1605" style="z-index: -10">
     <div class="cs-wrapper">
         <button id="cs-close-1605" class="cs-close" aria-label="close pop up">
-            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Close.svg" alt="clothing" width="24" height="24" aria-hidden="true">
+            <img decoding="async" src="/assets/images/checkmark.svg" alt="clothing" width="24" height="24" aria-hidden="true">
         </button>
         <picture class="cs-picture">
             <!--Mobile Image-->
             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/ecom.png" | resize({width: 686, height: 550}) | webp %}">
             <!--Tablet and above Image-->
             <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}">
-            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}" alt="clothing" width="413" height="500">
+            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}" alt="Ecommerce Site Preview">
         </picture>
         <div class="cs-content">
             <span class="cs-header">
