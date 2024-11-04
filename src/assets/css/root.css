@@ -2849,7 +2849,6 @@
 @media only screen and (min-width: 1300px) {
   #cta {
     position: relative;
-    margin-top: 6.25rem;
   }
   #cta .container {
     margin: auto;
@@ -2858,7 +2857,6 @@
   #cta picture {
     left: 50%;
     transform: translateX(-50%);
-    width: 90.0625%;
   }
   #cta picture:before {
     z-index: 1;
