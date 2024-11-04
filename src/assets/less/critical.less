@@ -1,3 +1,15 @@
+.observed-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .observed-section.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
 /*-- -------------------------- -->
 <---            Hero            -->
 <--- -------------------------- -*/
@@ -333,6 +345,186 @@
 }
 
 /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-245 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (522/16rem);
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: (32/16rem);
+        }
+
+        .cs-item {
+            text-align: left;
+            list-style: none;
+            width: 100%;
+            /* max-width set at tablet */
+            /* pushes up by the same amount the cs-item-img overlaps the card */
+            margin: (48/16rem) 0 0 0;
+            /* 16px - 36px left and right */
+            /* 24px - 36px on the bottom */
+            padding: (60/16rem) clamp(1rem, 2.7vw, 2.25rem)
+                clamp(1.25rem, 2.7vw, 2.25rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
+            border-radius: (4/16rem);
+            background: #fff;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .cs-item-img {
+            width: (72/16rem);
+            height: (72/16rem);
+            position: absolute;
+            top: (-48/16rem);
+            border-radius: 50%;
+        }
+
+        .cs-item-text {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            margin: 0 0 (24/16rem);
+            color: var(--bodyTextColor);
+        }
+
+        .cs-flex-group {
+            width: 100%;
+            padding-top: (24/16rem);
+            border-top: 1px solid #dad9e3;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .cs-reviewer {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.4vw, 1rem);
+            line-height: 1.5em;
+            font-weight: 700;
+            width: 40%;
+            margin: 0 auto 0 0;
+            display: block;
+            color: var(--headerColor);
+        }
+
+        .cs-desc,
+        .cs-rating {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.4vw, 1rem);
+            font-weight: 400;
+            line-height: 1.5em;
+            color: #7d799c;
+            display: block;
+        }
+
+        .cs-rating {
+            margin-right: (8/16rem);
+        }
+
+        .cs-item-stars {
+            width: (96/16em);
+            height: (16/16em);
+            /* centers it with the rating to the left */
+            margin-bottom: (3/16rem);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews-245 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            /* 16px - 20px */
+            column-gap: clamp(1rem, 1.5vw, 1.25rem);
+            row-gap: (64/16rem);
+        }
+
+        .cs-item {
+            /* we do this so it's stackable. You can add new any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of reviews, they don't stay centered.  They align with their grid lines. If you want 4 reviews in a row, lower the width under 22.5vw to get the desired sizes fit 4 in a row and then stack when you add more*/
+            width: clamp(31.5%, 30vw, 32.3%);
+            max-width: (413/16rem);
+            align-content: space-between;
+        }
+
+        .cs-flex-group {
+            /* push contents to the left */
+            justify-content: flex-start;
+        }
+
+        .cs-reviewer {
+            width: 100%;
+            margin-bottom: (8/16rem);
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #reviews-245 {
+        .cs-flex-group {
+            flex-wrap: nowrap;
+        }
+
+        .cs-reviewer {
+            margin: 0;
+        }
+
+        .cs-item-stars {
+            margin-bottom: (5/16rem);
+        }
+    }
+}
+
+                                
+
+/*-- -------------------------- -->
 <---           Modal            -->
 <--- -------------------------- -*/
 
@@ -610,5 +802,3 @@
         }
     }
 }
-
-

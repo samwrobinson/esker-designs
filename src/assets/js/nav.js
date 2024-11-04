@@ -67,5 +67,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+// Intersection Observer
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Function to handle intersection events
+    const handleIntersection = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add an active class to trigger animations or effects
+          entry.target.classList.add('active');
+          // Optionally stop observing once the section is in view
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+  
+    // Options for the observer
+    const options = {
+      root: null,         // Use the viewport as the root
+      threshold: 0.2      // Trigger when 20% of the section is visible
+    };
+  
+    // Create the observer
+    const observer = new IntersectionObserver(handleIntersection, options);
+  
+    // Target each section to be observed
+    const sections = document.querySelectorAll('.observed-section');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+  
                
                             
