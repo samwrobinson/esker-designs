@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Options for the observer
     const options = {
       root: null,         // Use the viewport as the root
-      threshold: 0.05      // Trigger when 20% of the section is visible
+      threshold: 0.1      // Trigger when 20% of the section is visible
     };
   
     // Create the observer
