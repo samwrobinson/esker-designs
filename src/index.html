@@ -61,7 +61,7 @@ eleventyNavigation:
 
 <section id="hero-1951">
     <picture class="cs-bg">
-        <source media="(max-width: 800px)" srcset="{% getUrl "/assets/images/blob-m.png" | resize({width: 412, height: 629}) | webp %}">
+        <source media="(max-width: 800px)" srcset="{% getUrl "/assets/images/blob-m.png" | resize({width: 412, height: 629}) | webp({quliaty: 20}) %}">
         <source media="(min-width: 801px)" srcset="{% getUrl "/assets/images/blob-svg.svg" | resize({width: 1415, height: 722}) | webp %}">
         <img decoding="async" src="{% getUrl "/assets/images/blob-svg.svg" | resize({width: 1415, height: 722}) | webp %}" alt="pancake" aria-hidden="true">
     </picture>
@@ -330,7 +330,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <a href="https://barerootscounseling.org/" target="_blank" class="cs-link">
                     <div class="cs-picture">
-                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-1.webp" | resize({ width: 266, height: 144}) %}" loading="lazy" decoding="async" alt="Bareroots Counseling Website, Designed by Esker Designs in Vermont" aria-hidden="true">
+                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-1.webp" | resize({ width: 266, height: 144}) %}"  width="253" height="144" loading="lazy" decoding="async" alt="Bareroots Counseling Website, Designed by Esker Designs in Vermont" aria-hidden="true">
                     </div>
                     <h3 class="cs-h3">Bareroots Counseling</h3>
                     <p class="cs-item-text">
@@ -341,7 +341,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <a href="https://peak-pressurewash.com/" target="_blank" class="cs-link">
                     <div class="cs-picture">
-                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-2.webp" | resize({ width: 253, height: 144}) %}" loading="lazy" decoding="async" alt="Peak Pressure Wash Website, Designed by Esker Designs in Vermont" aria-hidden="true">
+                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-2.webp" | resize({ width: 253, height: 144}) %}" width="253" height="144" loading="lazy" decoding="async" alt="Peak Pressure Wash Website, Designed by Esker Designs in Vermont" aria-hidden="true">
                     </div>
                     <h3 class="cs-h3">Peak Pressure Wash</h3>
                     <p class="cs-item-text">
