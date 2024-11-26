@@ -5,6 +5,7 @@
 <header id="cs-navigation">
     <div class="cs-container">
         <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
         <a href="/index" class="cs-logo" aria-label="back to home">
             <picture class="cs-picture">
                 <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/logo.webp" | resize({ width: 50, height: 50}) | webp %}">
@@ -26,69 +27,53 @@
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="/index" class="cs-li-link {% if page.url == '/' %} cs-active {% endif %}">
-                            home
+                        <a href="/index" class="cs-li-link cs-active">
+                            Home
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/service" class="cs-li-link {% if page.url == '/service/' %} cs-active {% endif %}">
-                            service
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/pricing" class="cs-li-link {% if page.url == '/pricing/' %} cs-active {% endif %}">
-                            pricing
+                        <a href="/service" class="cs-li-link">
+                            Service
                         </a>
                     </li>
                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                     <!-- <li class="cs-li cs-dropdown" tabindex="0">
                         <span class="cs-li-link">
-                            Services
-                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                            Top Locations
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                         </span>
                         <ul class="cs-drop-ul">
                             <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Semaglutide</a>
+                                <a href="" class="cs-li-link cs-drop-link">Burlington</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Tirezapetide</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Semaglutide</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Tirezapetide</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Semaglutide</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Tirezapetide</a>
+                                <a href="" class="cs-li-link cs-drop-link">Our Classes</a>
                             </li>
                         </ul>
                     </li> -->
                     <li class="cs-li">
-                        <a href="/index#services-344" class="cs-li-link">
-                            portfolio
+                        <a href="/pricing" class="cs-li-link">
+                            Pricing
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/about" class="cs-li-link {% if page.url == '/about/' %} cs-active {% endif %}">
-                            about
+                        <a href="/about" class="cs-li-link">
+                            About
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/blog" class="cs-li-link {% if page.url == '/blog/' %} cs-active {% endif %}">
-                            blog
+                        <a href="/blog" class="cs-li-link">
+                            Blog
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/contact" class="cs-li-link {% if page.url == '/contact/' %} cs-active {% endif %}">
-                            contact
+                        <a href="/contact" class="cs-li-link">
+                            Contact
                         </a>
                     </li>
                 </ul>
             </div>
+            <a href="/contact" class="cs-button-solid">Get a Quote</a>
         </nav>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
         <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
@@ -97,4 +82,5 @@
         </button> -->
     </div>
 </header>
+                                
                                 
