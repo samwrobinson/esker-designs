@@ -1,0 +1,113 @@
+---
+title: 'Waterbury Website Design | Custom Websites by Esker Designs'
+description: 'Esker Designs offers professional website design services for Waterbury businesses, specializing in fast, custom-coded websites that elevate your online presence. Contact us today to learn more!'
+preloadImg: '/assets/images/waterbury-banner.webp'
+permalink: 'waterbury/'
+eleventyNavigation:
+    key: Waterbury
+    order: 710
+---
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X729GQG8G8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-X729GQG8G8');
+    </script>
+    <link rel="stylesheet" href="/assets/css/projects.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1402">
+    <div class="cs-container">
+        <span class="cs-int-title">Waterbury Web Design & Development</span>
+    </div>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/summit-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/summit.webp">
+        <img decoding="async" src="/assets/images/summit-m.webp" alt="Sunset Rock in Warren, VT" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-1402">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <div class="cs-flex">
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/june-bug.webp">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/june-bug.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/june-bug.webp" alt="Sam holding his dog in Burlington" width="542" height="728">
+                </picture>
+            </div>
+        </div>
+        <div class="cs-content">
+            <h1 class="cs-title">Web Design Services for Waterbury Businesses</h1>
+            <p>
+                Waterbury, Vermont is known for its vibrant community, small-town charm, and iconic businesses. Whether you’re a café on Main Street, an outdoor gear retailer, or a professional service provider, Esker Designs builds websites that reflect your unique identity while driving results. Our custom-coded websites are tailored to meet the needs of Waterbury’s diverse business landscape.
+            </p>
+
+            <h3>Why Waterbury Businesses Choose Esker Designs</h3>
+            <p>
+                We specialize in creating fast, secure, and visually stunning websites. Unlike templated solutions, our hand-coded websites are built from scratch to deliver top-notch performance and unmatched flexibility. Here’s why our approach works:
+            </p>
+            <ul>
+                <li>Fast load times to engage visitors and boost conversions</li>
+                <li>Clean, SEO-optimized code to enhance search rankings</li>
+                <li>Custom designs that showcase your brand’s personality</li>
+                <li>Advanced security with no plugins or databases to manage</li>
+                <li>Mobile-first designs for a seamless user experience</li>
+            </ul>
+
+            <p>Want to learn more? Check out this <a href="/blog/website-speed/">article</a> explaining why all this matters!</p>
+
+            <h4>Web Design Tailored to Waterbury’s Small Businesses</h4>
+            <p>
+                From local coffee shops to specialty retailers, Waterbury’s businesses thrive on individuality and connection. Our websites capture your unique story and help you connect with both locals and visitors exploring Vermont. With a design that’s as distinct as your business, your online presence will stand out from the crowd.
+            </p>
+
+            <h4>Enhanced Local SEO for Waterbury</h4>
+            <p>
+                Our SEO-friendly websites ensure your business ranks well in local searches. Whether a visitor is planning a trip to the Ben & Jerry’s Factory or searching for a local service provider, our web design helps you capture attention and drive traffic.
+            </p>
+
+            <h4>Industries We Serve in Waterbury</h4>
+            <p>We’re proud to work with a variety of businesses in Waterbury, including:</p>
+            <ul>
+                <li>Local restaurants and breweries</li>
+                <li>Retail shops and specialty stores</li>
+                <li>Outdoor and adventure gear businesses</li>
+                <li>Professional services and consultants</li>
+                <li>Artisan and craft-focused businesses</li>
+            </ul>
+
+            <h3>Invest in Your Waterbury Business with a Custom Website</h3>
+            <p>
+                At Esker Designs, we make professional web design accessible with our all-inclusive plans starting at $175/month. This includes custom design, hosting, updates, and support, so you can focus on running your business while we handle your online presence.
+            </p>
+            <p>
+                Ready to grow your Waterbury business? <a href="/contact/">Contact us today</a> for a free consultation and find out how we can help your business thrive online.
+            </p>
+        </div>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+{% endblock %}

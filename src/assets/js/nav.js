@@ -23,6 +23,20 @@ function ariaExpanded() {
     }
 }
 
+    // This script adds a class to the body after scrolling 100px
+// and we used these body.scroll styles to create some on scroll 
+// animations with the navbar
+
+document.addEventListener('scroll', (e) => { 
+    const scroll = document.documentElement.scrollTop;
+    if(scroll >= 100){
+document.querySelector('body').classList.add('scroll')
+    } else {
+    document.querySelector('body').classList.remove('scroll')
+    }
+});
+
+
 // mobile nav toggle code
 const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
     for (const item of dropDowns) {
@@ -31,6 +45,7 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
     }
     item.addEventListener('click', onClick)
     }
+                            
 
 // your local storage reset for local testing. uncomment this command so you can still access you pop up after clicking the close or submit button.
 // localStorage.setItem('closed', 'false');
@@ -92,6 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(section);
     });
   });
+  
+  
+
   
                
                             
