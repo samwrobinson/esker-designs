@@ -12,22 +12,15 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X729GQG8G8"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-X729GQG8G8');
-    </script>  
-
+    <!-- Critical CSS and Preloads -->
     <link rel="preload" href="/assets/images/header-mockup.webp">
     <link rel="preload" href="/assets/images/blob-m.png">
+    <link rel="preload" as="image" href="/assets/images/blob-svg.svg">
+
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
-    <!-- Script for Netlify Identity -->
+    <!-- Netlify Identity Widget -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script defer>
         if (window.netlifyIdentity) {
@@ -44,7 +37,25 @@ eleventyNavigation:
                 });
         }
     </script>
+
+    <!-- Defer Google Analytics -->
+    <script>
+        window.addEventListener('load', function () {
+            var gtagScript = document.createElement('script');
+            gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-X729GQG8G8';
+            gtagScript.async = true;
+            document.head.appendChild(gtagScript);
+
+            gtagScript.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-X729GQG8G8');
+            };
+        });
+    </script>
 {% endblock %}
+
 
 {% block body %}
 
