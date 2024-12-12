@@ -1,6 +1,6 @@
 ---
 title: 'Vermont Web Design for Small Businesses | Esker Designs, Warren, Vermont'
-description: 'We are a full-service Vermont web design company offering 100% hand-coded websites starting at $150/mo. We specialize in custom designs for small businesses, nonprofits, and institutions in Vermont and beyond.'
+description: 'We are a full-service Vermont web design company offering 100% hand-coded websites starting at $175/mo. We specialize in custom designs for small businesses, nonprofits, and institutions in Vermont and beyond.'
 preloadImg: '/assets/images/logo.webp'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
@@ -60,32 +60,57 @@ eleventyNavigation:
 {% block body %}
 
 <!-- ============================================ -->
-<!--                     Hero                     -->
+<!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-1951">
-    <picture class="cs-bg">
-        <source media="(max-width: 800px)" srcset="{% getUrl "/assets/images/blob-m.png" | resize({width: 412, height: 629}) | webp({quliaty: 20}) %}">
-        <source media="(min-width: 801px)" srcset="{% getUrl "/assets/images/blob.webp" | resize({width: 1415, height: 722}) | webp %}">
-        <img decoding="async" src="{% getUrl "/assets/images/blob.webp" | resize({width: 1415, height: 722}) | webp %}" alt="pancake" aria-hidden="true">
-    </picture>
+<section id="hero-1115">
     <div class="cs-container">
         <div class="cs-content">
-            <h5 class="cs-topper">Welcome to Esker Designs</h5>
+            <span class="cs-topper">Welcome to Esker Designs</span>
             <h2 class="cs-title">
                 A Vermont Small Business Web Design Agency 
             </h2>
             <p class="cs-text">
                 Get a website designed to attract customers, drive business, and impress —
-                all without the burden of upfront costs. We offer 100% hand-coded websites, starting at just $150/month.
+                all without the burden of upfront costs. We offer 100% hand-coded websites, starting at just $175/month.
             </p>
             <a href="/contact" class="cs-button-solid">Get a Quote</a>
         </div>
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 420, height: 400}) | webp({quality: 30}) %}">
-            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 500, height: 500}) | webp({quality: 30}) %}">
-            <img decoding="async" src="{% getUrl "/assets/images/header-mockup.webp" | resize({width: 500, height: 500}) | webp({quality: 30}) %}" alt="Decorative squiggles" loading="lazy" aria-hidden="true">
-        </picture>
+        <!--Hero Image-->
+        <!--We need a wrapper div around the image group so the volunteer box can be relatively positioned on mobile to make stacking the design easier -->
+        <div class="cs-image-group-wrapper">
+            <div class="cs-image-group" aria-hidden="true">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | webp %}">
+                    <img decoding="async" src="{% getUrl "/assets/images/header-mockup.webp" | webp %}" alt="people">
+                </picture>
+                <!--Floating Icon-->
+                <picture class="cs-floater" aria-hidden="true">
+                    <img class="cs-floater-icon" decoding="async" fetchpriority="high" src="/assets/svgs/code.svg" alt="icon" width="52" height="52">
+                </picture>
+                <img class="cs-graphic cs-graphic1" aria-hidden="true" decoding="async" fetchpriority="high" src="/assets/svgs/yellow-graphic.svg" alt="icon" width="586" height="356">
+                <!--Bottom Graphic-->
+                <img class="cs-graphic cs-graphic2" aria-hidden="true" decoding="async" fetchpriority="high" src="/assets/svgs/green-graphic.svg" alt="icon" width="586" height="356">
+            </div>
+            <!--Volunteer Box-->
+        <a id="jump" href="#reviews-245">
+            <div class="cs-volunteer" aria-hidden="true">
+                <span class="cs-header">See Our Reviews</span>
+                <div class="cs-volunteer-flex">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/moxie.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/amber.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/cameron.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/sam-portrait.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/blueberry-lake.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
+                    <span class="cs-volunteer-number">5+</span>
+                </div>
+                <!--Squiggly Arrow-->
+                <img class="cs-arrow" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sqiggly-arrow.svg" alt="icon" width="48" height="48">
+            </div>
+        </a>
+        </div>
     </div>
 </section>
                                 
@@ -97,7 +122,7 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Why Choose us</span>
-            <h2 class="cs-title"><span class="emphasis">$0</span> Down, <span class="emphasis">$150</span> Per Month, Year-Long Minimum Contract</h2>
+            <h2 class="cs-title"><span class="emphasis">$0</span> Down, <span class="emphasis">175</span> Per Month, Year-Long Minimum Contract</h2>
             <p class="cs-text">
                 Launch a professional 5-page website for your business with no upfront costs.
                 Need more? We can always tailor a custom plan to fit your needs. Esker
@@ -495,7 +520,7 @@ eleventyNavigation:
                 <div class="cs-flex">
                     <span class="cs-package">LUMP SUM</span>
                     <span class="cs-price">
-                        $2500
+                        $3500
                     </span>
                     <div class="cs-tag">
                         <img class="cs-icon" aria-hidden="true" src="/assets/svgs/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
@@ -552,7 +577,7 @@ eleventyNavigation:
                 <div class="cs-flex">
                     <span class="cs-package">MONTHLY</span>
                     <span class="cs-price">
-                        $150
+                        $175
                         <span class="cs-duration">/Month</span>
                     </span>
                     <div class="cs-tag">
