@@ -82,28 +82,25 @@ eleventyNavigation:
             <div class="cs-image-group" aria-hidden="true">
                 <picture class="cs-picture cs-picture1">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | webp %}">
-                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/header-mockup.webp" | webp %}">
-                    <img decoding="async" src="{% getUrl "/assets/images/header-mockup.webp" | webp %}" alt="people">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup-v2.webp" | resize({width: 336, height: 221}) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/header-mockup-large.webp" | resize({width: 940, height: 756}) | webp %}">
+                    <img decoding="async" src="{% getUrl "/assets/images/header-mockup-large.webp" | resize({width: 940, height: 756}) | webp %}" alt="Site designed by Esker Designs in Vermont">
                 </picture>
                 <!--Floating Icon-->
                 <picture class="cs-floater" aria-hidden="true">
                     <img class="cs-floater-icon" decoding="async" fetchpriority="high" src="/assets/svgs/code.svg" alt="icon" width="52" height="52">
                 </picture>
-                <img class="cs-graphic cs-graphic1" aria-hidden="true" decoding="async" fetchpriority="high" src="/assets/svgs/yellow-graphic.svg" alt="icon" width="586" height="356">
-                <!--Bottom Graphic-->
-                <img class="cs-graphic cs-graphic2" aria-hidden="true" decoding="async" fetchpriority="high" src="/assets/svgs/green-graphic.svg" alt="icon" width="586" height="356">
             </div>
             <!--Volunteer Box-->
         <a id="jump" href="#reviews-245">
             <div class="cs-volunteer" aria-hidden="true">
-                <span class="cs-header">See Our Reviews</span>
+                <span class="cs-header">Read Our Reviews</span>
                 <div class="cs-volunteer-flex">
-                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/moxie.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
-                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/amber.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
-                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/cameron.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
-                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/sam-portrait.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
-                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/blueberry-lake.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="icon" width="48" height="48">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/moxie.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="Customer Icon" width="48" height="48">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/amber.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="Customer Icon" width="48" height="48">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/cameron.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="Customer Icon" width="48" height="48">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/sam-portrait.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="Customer Icon" width="48" height="48">
+                    <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="{% getUrl "/assets/images/blueberry-lake.webp" | resize({width: 36, height: 36}) | webp({quality: 50}) %}" alt="Customer Icon" width="48" height="48">
                     <span class="cs-volunteer-number">5+</span>
                 </div>
                 <!--Squiggly Arrow-->
