@@ -13,11 +13,6 @@ eleventyNavigation:
 
 {% block head %}
     <!-- Critical CSS and Preloads -->
-    <link rel="preload" href="/assets/images/header-mockup.webp">
-    <link rel="preload" href="/assets/images/blob-m.png">
-    <link rel="preload" as="image" href="/assets/images/blob-svg.svg">
-
-    <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
     <!-- Netlify Identity Widget -->
@@ -82,8 +77,8 @@ eleventyNavigation:
             <div class="cs-image-group" aria-hidden="true">
                 <picture class="cs-picture cs-picture1">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup-v2.webp" | resize({width: 336, height: 221}) | webp %}">
-                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/header-mockup-large.webp" | resize({width: 940, height: 756}) | webp %}">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/header-mockup-v2.webp" | resize({width: 336, height: 221}) | webp({quality: 30}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/header-mockup-large.webp" | resize({width: 940, height: 756}) | webp({quality: 50}) %}">
                     <img decoding="async" src="{% getUrl "/assets/images/header-mockup-large.webp" | resize({width: 940, height: 756}) | webp %}" alt="Site designed by Esker Designs in Vermont">
                 </picture>
                 <!--Floating Icon-->
