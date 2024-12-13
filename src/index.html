@@ -13,7 +13,12 @@ eleventyNavigation:
 
 {% block head %}
 <!-- Critical Resources -->
-<link rel="stylesheet" href="/assets/css/critical.css"/>
+<link rel="stylesheet" href="/assets/css/critical.css">
+<link rel="stylesheet" href="/assets/css/local.css"
+    media="print" onload="this.media='all'; this.onload=null;">
+<noscript>
+    <link rel="stylesheet" href="/css/local.css">
+</noscript>
 
 <!-- Preload Critical Fonts -->
 <link rel="preload" href="/fonts/montserrat-v26-latin-500.woff2" as="font" type="font/woff2" crossorigin>
