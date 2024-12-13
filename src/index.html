@@ -12,16 +12,17 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <!-- Critical CSS and Preloads -->
-    <link rel="stylesheet" href="/assets/css/critical.css"/>
-    <link rel="preload" href="/fonts/montserrat-v26-latin-500.woff2 " as="font" type="font/woff2" crossorigin>
-    <link rel="preload" as="image" href="/assets/images/header-mockup-v2.webp">
-    <link rel="preload" as="image" href="/assets/images/moxie.webp">
-    <link rel="preload" as="image" href="/assets/images/amber.webp">
-    <link rel="preload" as="image" href="/assets/images/cameron.webp">
-    <link rel="preload" as="image" href="/assets/images/sam-portrait.webp">
-    <link rel="preload" as="image" href="/assets/images/blueberry-lake.webp">
-    <link rel="preload" as="image" href="/assets/svgs/sqiggly-arrow.svg">
+<!-- Critical Resources -->
+<link rel="stylesheet" href="/assets/css/critical.css"/>
+
+<!-- Preload Critical Fonts -->
+<link rel="preload" href="/fonts/montserrat-v26-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Preload Critical Images -->
+<link rel="preload" as="image" href="/assets/images/header-mockup-v2.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/images/logo.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/svgs/code.svg" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/svgs/sqiggly-arrow.svg" fetchpriority="high">
 
     <!-- Netlify Identity Widget -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -41,22 +42,6 @@ eleventyNavigation:
         }
     </script>
 
-    <!-- Defer Google Analytics -->
-    <script>
-        window.addEventListener('load', function () {
-            var gtagScript = document.createElement('script');
-            gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-X729GQG8G8';
-            gtagScript.async = true;
-            document.head.appendChild(gtagScript);
-
-            gtagScript.onload = function () {
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-X729GQG8G8');
-            };
-        });
-    </script>
 {% endblock %}
 
 
@@ -691,32 +676,7 @@ eleventyNavigation:
         </ul>
     </div>
 </section>
-                        
-                                
 
-<!-- ============================================ -->
-<!--                Pop Up Modal                  -->
-<!-- ============================================ --> 
-
-<!-- <div id="cs-modal-1605" style="z-index: -10">
-    <div class="cs-wrapper">
-        <button id="cs-close-1605" class="cs-close" aria-label="close pop up">
-            <img decoding="async" src="/assets/images/checkmark.svg" alt="clothing" width="24" height="24" aria-hidden="true">
-        </button>
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/ecom.png" | resize({width: 686, height: 550}) | webp %}">
-            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}">
-            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/ecom.png" | resize({width: 783, height: 864}) | webp %}" alt="Ecommerce Site Preview">
-        </picture>
-        <div class="cs-content">
-            <span class="cs-header">
-                We are now offering E-commerce Store Development!
-            </span>
-            <p>Click below to view our demo site.</p>
-            <a href="https://upland-ecommerce.netlify.app/" target="_blank" class="cs-button-solid">View Site</a>
-        </div>
-    </div>
-</div> -->
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {

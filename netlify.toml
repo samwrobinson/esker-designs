@@ -2,8 +2,14 @@
   publish = "public/"
   command = "npm run build"
 
+[build.processing]
+  skip_processing = false # Ensures processing is enabled
+  css = { bundle = true, minify = true }
+  js = { bundle = true, minify = true }
+  html = { pretty_urls = true }
+  images = { compress = true }
+
 [[plugins]]
-  # Installs the Lighthouse Build Plugin for all deploy contexts
   package = "@netlify/plugin-lighthouse"
 
 [[plugins]]
@@ -11,6 +17,6 @@ package = "netlify-plugin-cache"
 
   [plugins.inputs]
   paths = [
-    "public/assets/images", # Processed images - adjust to match your outputDir
-    ".cache" # Remote Assets
+    "public/assets/images",
+    ".cache"
   ]
