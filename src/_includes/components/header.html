@@ -27,32 +27,32 @@
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="/index" class="cs-li-link cs-active">
+                        <a href="/index" class="cs-li-link {% if page.url == '/' %} cs-active {% endif %}">
                             Home
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/service" class="cs-li-link">
+                        <a href="/service" class="cs-li-link {% if page.url == '/service/' %} cs-active {% endif %}">
                             Service
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/pricing" class="cs-li-link">
+                        <a href="/pricing" class="cs-li-link {% if page.url == '/pricing/' %} cs-active {% endif %}">
                             Pricing
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/about" class="cs-li-link">
+                        <a href="/about" class="cs-li-link {% if page.url == '/about/' %} cs-active {% endif %}">
                             About
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/blog" class="cs-li-link">
+                        <a href="/blog" class="cs-li-link {% if page.url == '/blog/' %} cs-active {% endif %}">
                             Blog
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/contact" class="cs-li-link">
+                        <a href="/contact" class="cs-li-link {% if page.url == '/contact/' %} cs-active {% endif %}">
                             Contact
                         </a>
                     </li>

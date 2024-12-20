@@ -42,6 +42,7 @@
     --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
     --bodyTextColor: #2f4858;
+    --bodyTextColorTwo: #53829f;
     --bodyTextColorWhite: #fff9fb;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -841,7 +842,7 @@
     color: var(--primary);
   }
   #cs-navigation .cs-li-link.cs-active {
-    color: var(--primary);
+    color: var(--bodyTextColorTwo);
   }
   #cs-navigation .cs-button-solid {
     font-size: 1rem;
