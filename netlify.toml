@@ -9,6 +9,18 @@
   html = { pretty_urls = true }
   images = { compress = true }
 
+[[redirects]]
+  from = "http://*"
+  to = "https://eskerdesigns.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.eskerdesigns.com/*"
+  to = "https://eskerdesigns.com/:splat"
+  status = 301
+  force = true
+
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
