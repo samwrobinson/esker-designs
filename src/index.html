@@ -718,37 +718,6 @@ eleventyNavigation:
     </div>
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const swiperSection = document.querySelector('#services-344');
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Initialize Swiper when the section is visible
-                    const swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 'auto',
-                        centeredSlides: true,
-                        spaceBetween: 30,
-                        loop: true,
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        },
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true,
-                        },
-                    });
-                    observer.unobserve(swiperSection); // Stop observing once loaded
-                }
-            });
-        });
-
-        observer.observe(swiperSection);
-    });
-</script>
-
                   
 
     {% include 'components/cta.html' %}
