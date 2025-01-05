@@ -21,11 +21,15 @@ eleventyNavigation:
 </noscript>
 
 <script defer src="https://cloud.umami.is/script.js" data-website-id="ad4f603c-adc2-4df0-8440-601f99120b46"></script>
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
+<!-- Include Swiper styles -->
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" media="print" onload="this.media='all';">
 <noscript>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
 </noscript>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+
+<!-- Include Swiper JavaScript -->
+<script src="/assets/js/swiper-bundle.min.js" defer></script>
+
 
 
 
@@ -713,6 +717,38 @@ eleventyNavigation:
         </ul>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const swiperSection = document.querySelector('#services-344');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Initialize Swiper when the section is visible
+                    const swiper = new Swiper('.swiper-container', {
+                        slidesPerView: 'auto',
+                        centeredSlides: true,
+                        spaceBetween: 30,
+                        loop: true,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    });
+                    observer.unobserve(swiperSection); // Stop observing once loaded
+                }
+            });
+        });
+
+        observer.observe(swiperSection);
+    });
+</script>
+
                   
 
     {% include 'components/cta.html' %}
