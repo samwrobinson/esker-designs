@@ -21,6 +21,9 @@ eleventyNavigation:
 </noscript>
 
 <script defer src="https://cloud.umami.is/script.js" data-website-id="ad4f603c-adc2-4df0-8440-601f99120b46"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
 
 <!-- Preload Critical Images -->
@@ -333,57 +336,82 @@ eleventyNavigation:
     </div>
 </section>
 
-                                
-
 
 <!-- ============================================ -->
 <!--                  Services                    -->
 <!-- ============================================ -->
-
 <section id="services-344" class="observed-section">
     <div class="cs-container">
         <div class="cs-content">
             <h2 class="cs-title">Esker Designs Portfolio | Vermont Web Design</h2>
         </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <a href="https://barerootscounseling.org/" target="_blank" class="cs-link">
-                    <div class="cs-picture">
-                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-1.webp" | resize({ width: 266, height: 144}) %}"  width="253" height="144" loading="lazy" decoding="async" alt="Bareroots Counseling Website, Designed by Esker Designs in Vermont" aria-hidden="true">
-                    </div>
-                    <h3 class="cs-h3">Bareroots Counseling</h3>
-                    <p class="cs-item-text">
-                        See our work in action. Click here to view our recent projects.
-                    </p>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="https://peak-pressurewash.com/" target="_blank" class="cs-link">
-                    <div class="cs-picture">
-                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-2.webp" | resize({ width: 253, height: 144}) %}" width="253" height="144" loading="lazy" decoding="async" alt="Peak Pressure Wash Website, Designed by Esker Designs in Vermont" aria-hidden="true">
-                    </div>
-                    <h3 class="cs-h3">Peak Pressure Wash</h3>
-                    <p class="cs-item-text">
-                        See our work in action. Click here to view our recent projects.
-                    </p>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="https://alpenglowcounselingvt.com/" target="_blank" class="cs-link">
-                    <div class="cs-picture">
-                        <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-3.png" | resize({ width: 253, height: 144}) | webp %}" width="253" height="144" loading="lazy" decoding="async" alt="Alpenglow Counseling Website, Designed by Esker Designs in Vermont" aria-hidden="true">
-                    </div>
-                    <h3 class="cs-h3">Alpenglow Counseling</h3>
-                    <p class="cs-item-text">
-                        See our work in action. Click here to view our recent projects.
-                    </p>
-                </a>
-            </li>
-        </ul>
-        <!-- <a href="" class="cs-button-solid">View Portfolio</a> -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide cs-item">
+                    <a href="https://peakpainting.netlify.app/" target="_blank" class="cs-link">
+                        <div class="cs-picture">
+                            <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-4.png" | resize({ width: 266, height: 160}) %}"  width="253" height="144" loading="lazy" decoding="async" alt="Peak Painting">
+                        </div>
+                        <h3 class="cs-h3">Peak Painting</h3>
+                        <p class="cs-item-text">
+                            See our work in action. Click here to view our recent projects.
+                        </p>
+                    </a>
+                </div>
+                <div class="swiper-slide cs-item">
+                    <a href="https://blueberrylakexc.com/" target="_blank" class="cs-link">
+                        <div class="cs-picture">
+                            <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-5.png" | resize({ width: 266, height: 160}) %}"  width="253" height="144" loading="lazy" decoding="async" alt="Peak Painting">
+                        </div>
+                        <h3 class="cs-h3">Blueberry Lake XC</h3>
+                        <p class="cs-item-text">
+                            See our work in action. Click here to view our recent projects.
+                        </p>
+                    </a>
+                </div>
+                <div class="swiper-slide cs-item">
+                    <a href="https://barerootscounseling.org/" target="_blank" class="cs-link">
+                        <div class="cs-picture">
+                            <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-1.webp" | resize({ width: 266, height: 144}) %}"  width="253" height="144" loading="lazy" decoding="async" alt="Bareroots Counseling">
+                        </div>
+                        <h3 class="cs-h3">Bareroots Counseling</h3>
+                        <p class="cs-item-text">
+                            See our work in action. Click here to view our recent projects.
+                        </p>
+                    </a>
+                </div>
+                <div class="swiper-slide cs-item">
+                    <a href="https://peak-pressurewash.com/" target="_blank" class="cs-link">
+                        <div class="cs-picture">
+                            <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-2.webp" | resize({ width: 253, height: 144}) %}" width="253" height="144" loading="lazy" decoding="async" alt="Peak Pressure Wash">
+                        </div>
+                        <h3 class="cs-h3">Peak Pressure Wash</h3>
+                        <p class="cs-item-text">
+                            See our work in action. Click here to view our recent projects.
+                        </p>
+                    </a>
+                </div>
+                <div class="swiper-slide cs-item">
+                    <a href="https://alpenglowcounselingvt.com/" target="_blank" class="cs-link">
+                        <div class="cs-picture">
+                            <img class="cs-icon" src="{% getUrl "/assets/images/portfolio-3.png" | resize({ width: 253, height: 144}) | webp %}" width="253" height="144" loading="lazy" decoding="async" alt="Alpenglow Counseling">
+                        </div>
+                        <h3 class="cs-h3">Alpenglow Counseling</h3>
+                        <p class="cs-item-text">
+                            See our work in action. Click here to view our recent projects.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </div>
 </section>
-                                
+            
 
 <!-- ============================================ -->
 <!--                Meet the Team                 -->
